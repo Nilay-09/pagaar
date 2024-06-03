@@ -111,7 +111,7 @@ export default function LandingMobile() {
               <PagaarLogoF />
             </div>
 
-            <div className="text-[1.125rem] leading-[24px] text-[#98BAFF] poppins-600">
+            <div className="text-[1.125rem] leading-[24px] text-[#98BAFF] poppins-600 overflow-y-hidden">
               Pagaar.io 0.0.01
             </div>
           </div>
