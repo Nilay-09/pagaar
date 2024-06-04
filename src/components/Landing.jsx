@@ -126,10 +126,10 @@ function landing() {
             <div className="absolute top-0 w-full h-[190px] bg-[#683BE8] rounded-bl-3xl rounded-br-3xl z-0"></div>
             <div className="absolute top-0 w-full h-[280px] bg-[#fff] z-[-1]"></div>
 
-            <div className="relative cardHolder pt-[34px] flex  flex-wrap gap-8 w-[70rem] mx-auto min-h-[480px] mb-12 z-10">
+            <div className="relative cardHolder pt-[34px] flex  flex-wrap gap-8 w-[90%] w-main-landing-card-holder mx-auto min-h-[480px] mb-12 z-10">
               
               {/* Card */}
-              <div className="w-[22rem] h-[27.25rem] pt-[50px] relative">
+              <div className="w-[31%] h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
                   <img src={Rocket} alt="" />
                 </div>
@@ -141,7 +141,7 @@ function landing() {
                 </div>
               </div>
               {/* Card */}
-              <div className="w-[22rem] h-[27.25rem] pt-[50px] relative">
+              <div className="w-[31%] h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
                   <img src={Rocket} alt="" />
                 </div>
@@ -155,7 +155,7 @@ function landing() {
               </div>
 
               {/* Card */}
-              <div className="w-[22rem] h-[27.25rem] pt-[50px] relative">
+              <div className="w-[31%] h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
                   <img src={Rocket} alt="" />
                 </div>
@@ -213,7 +213,7 @@ function landing() {
             </div>
 
             <div className="w-full text-center mt-7">
-              <span className="poppins-400 text-[#777E90] text-[12px] leading-5">© 2024, Pagaar LLC.</span>
+              <span className="poppins-400 text-[#777E90] text-[12px] leading-5">©2021, Unbook Solutions Pvt Ltd</span>
             </div>
           </div>
         </div>

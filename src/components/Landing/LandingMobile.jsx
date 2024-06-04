@@ -142,7 +142,7 @@ export default function LandingMobile() {
 
           <div className="w-full text-center mt-7">
             <span className="poppins-400 text-[#777E90] text-[12px] leading-5">
-              © 2024, Pagaar LLC.
+              ©2021, Unbook Solutions Pvt Ltd
             </span>
           </div>
         </div>

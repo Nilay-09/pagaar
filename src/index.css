@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+@media (min-width: 1100px) {
+
+    .w-main-landing-card {
+      min-height: 1000px;
+    }
+}
+
 @media (min-width: 1700px) {
     .w-main-landing {
       margin: 0px 260px;
@@ -11,6 +18,10 @@
     .w-main-landing-div {
       min-height: 1000px;
     }
+
+    .w-main-landing-card-holder {
+        width: 70rem;
+      }
 }
 @media (min-width: 1900px) {
     .w-main-landing {
