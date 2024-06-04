@@ -3,10 +3,73 @@
 @tailwind utilities;
 
 
-@media (min-width: 1100px) {
+
+@media (min-width: 440px) {
+
+.earth-mobile{
+  height: 834px;
+}
+
+.earth-mobile-text{
+  width: 382px;
+}
+
+
+}
+@media (max-width: 440px) {
+
+.earth-mobile{
+
+  height: 431px;
+}
+.earth-mobile-text{
+  width: 100%;
+}
+
+}
+
+
+
+
+@media (min-width: 770px) {
+
+    .w-navbar-holder{
+      width: 700px;
+      /* background-color: aqua; */
+    }
+    .height-main-div{
+      height: 700px;
+      /* background-color: aqua; */
+    }
+    .earth-img{
+      height: 100%;
+    }
+
+    .w-card-landing{
+      width: 40%;
+    }
+}
+
+@media (min-width: 1150px) {
+
+  .w-card-landing{
+    width: 31%;
+  }
+}
+
+
+@media (min-width: 1000px) {
 
     .w-main-landing-card {
       min-height: 1000px;
+    }
+    .w-navbar-holder{
+      width: 1024px;
+      /* background-color: aqua; */
+    }
+    .height-main-div{
+      height: 1000px;
+      /* background-color: aqua; */
     }
 }
 

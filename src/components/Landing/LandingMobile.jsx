@@ -76,12 +76,15 @@ export default function LandingMobile() {
           <img src={ipad} alt="" className="mx-auto z-10 w-[90%] mt-[67px]" />
         </div>
 
-        <div className="w-full px-6 py-[30px] urbanist-800 text-[48px] leading-[56px] bg-[#683BE8] text-white">
+        <div className='w-full bg-[#683BE8] px-6'>
+        <div className="earth-mobile-text  py-[30px] urbanist-800 text-[48px] leading-[56px] bg-[#683BE8] text-white">
           Get instant real-time alerts of all the openings on the internet
         </div>
+        </div>
 
-        <div className="w-full min-h-[420px] flex flex-col relative">
+        <div className="w-full min-h-[420px] flex flex-col relative earth-mobile">
           <div className="min-h-[290px] bg-[#683BE8]"></div>
+
           <div className="flex-1 bg-[#fff]"></div>
           <img src={Earth} alt="" className="absolute inset-0 w-full object-cover h-full z-20" />
         </div>

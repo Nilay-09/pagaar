@@ -37,7 +37,7 @@ function landing() {
 
         <div className="w-full h-[3.375rem] b">
         {/* Navbar */}
-        <div className="w-[64rem] h-full  mx-auto flex justify-between">
+        <div className="w-[64rem] h-full  mx-auto flex justify-between w-navbar-holder">
     
           <div className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
             <PagaarLogoF />
@@ -49,7 +49,7 @@ function landing() {
         </div>
 
         {/* Main Div */}
-        <div className="w-full min-h-[1144px] w-main-landing-div px-[4rem]  relative">
+        <div className="w-full w-main-landing-div px-[4rem] height-main-div  relative">
           <div className="absolute inset-0 z-0 overflow-y-hidden w-main-landing">
             <BackgroundMainLogo />
           </div>
@@ -103,9 +103,9 @@ function landing() {
             </div>
           </div>
 
-          <div className="w-[100%] h-[390px] bg-[#683BE8] ">
+          <div className="w-[100%] bg-[#683BE8] ">
             <div className="flex px-[112px] gap-[88px] justify-center items-center">
-              <div className="w-[533px] h-[220px] overflow-y-hidden  ">
+              <div className="w-[533px] overflow-y-hidden  ">
                 <div className="poppins-600 text-[#fff] text-[38px] leading-[56px] ">
                   Get instant real-time alerts of all the openings on the
                   internet
@@ -116,7 +116,7 @@ function landing() {
                 <img
                   src={Earth}
                   alt=""
-                  className="w-full h-[385px] object-cover "
+                  className="w-full h-[385px] object-cover earth-img"
                 />
               </div>
             </div>
@@ -129,25 +129,25 @@ function landing() {
             <div className="relative cardHolder pt-[34px] flex  flex-wrap gap-8 w-[90%] w-main-landing-card-holder mx-auto min-h-[480px] mb-12 z-10">
               
               {/* Card */}
-              <div className="w-[31%] h-[27.25rem] pt-[50px] relative">
+              <div className="w-card-landing h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
                   <img src={Rocket} alt="" />
                 </div>
                 {/* //box */}
                 <div className="bg-[#141416] w-full min-h-[380px] rounded-[32px] text-[#E6E8EC] pt-[11rem] pl-[48px] pr-[54px] text-[24px] leading-[32px]">
-                  <div className="w-[240px]">
+                  <div className="w-[100%]">
                     Just set an alert in your preferred job profile.
                   </div>
                 </div>
               </div>
               {/* Card */}
-              <div className="w-[31%] h-[27.25rem] pt-[50px] relative">
+              <div className="w-card-landing min-h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
                   <img src={Rocket} alt="" />
                 </div>
                 {/* //box */}
                 <div className="bg-[#141416] w-full min-h-[380px] rounded-[32px] text-[#E6E8EC] pt-[11rem] pl-[48px] pr-[54px] text-[24px] leading-[32px]">
-                  <div className="w-[240px]">
+                  <div className="w-[100%]">
                     Pagaar will hunt down all the openings for that profile from
                     the internet.
                   </div>
@@ -155,13 +155,13 @@ function landing() {
               </div>
 
               {/* Card */}
-              <div className="w-[31%] h-[27.25rem] pt-[50px] relative">
+              <div className="w-card-landing min-h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
                   <img src={Rocket} alt="" />
                 </div>
                 {/* //box */}
                 <div className="bg-[#141416] w-full min-h-[380px] rounded-[32px] text-[#E6E8EC] pt-[11rem] pl-[48px] pr-[54px] text-[24px] leading-[32px]">
-                  <div className="w-[240px]">
+                  <div className="w-[100%]">
                     And be the fastest to apply for any job opening.
                   </div>
                 </div>

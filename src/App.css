@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    /* outline: 2px solid red; */
+    outline: 2px solid red;
 }
 .poppins-black {
     font-family: "Poppins", sans-serif;
