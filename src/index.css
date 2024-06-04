@@ -3,3 +3,32 @@
 @tailwind utilities;
 
 
+@media (min-width: 1700px) {
+    .w-main-landing {
+      margin: 0px 260px;
+      height: max-content;
+    }
+    .w-main-landing-div {
+      min-height: 1000px;
+    }
+}
+@media (min-width: 1900px) {
+    .w-main-landing {
+      margin: 0px 260px;
+      height: max-content;
+    }
+    .w-main-landing-div {
+      min-height: 1300px;
+    }
+}
+
+@media (min-width: 2200px) {
+    .w-main-landing {
+      margin: 0px 260px;
+      height: max-content;
+    }
+    .w-main-landing-div {
+      min-height: 2000px;
+    }
+}
+

@@ -34,19 +34,23 @@ function landing() {
   return (
     <>
       <div className="w-screen min-h-screen pt-[3.5rem] relative">
+
+        <div className="w-full h-[3.375rem] b">
         {/* Navbar */}
-        <div className="w-[64rem] h-[3.375rem] mx-auto flex justify-between">
-          <div className="w-[7.75rem] h-full flex justify-center items-center">
+        <div className="w-[64rem] h-full  mx-auto flex justify-between">
+    
+          <div className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
             <PagaarLogoF />
           </div>
           <div className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow">
             Join Waiting List
           </div>
         </div>
+        </div>
 
         {/* Main Div */}
-        <div className="w-full min-h-[1144px] px-[4rem]  relative">
-          <div className="absolute inset-0 z-0 overflow-y-hidden">
+        <div className="w-full min-h-[1144px] w-main-landing-div px-[4rem]  relative">
+          <div className="absolute inset-0 z-0 overflow-y-hidden w-main-landing">
             <BackgroundMainLogo />
           </div>
 
@@ -121,7 +125,9 @@ function landing() {
           <div className="w-full relative bg-white">
             <div className="absolute top-0 w-full h-[190px] bg-[#683BE8] rounded-bl-3xl rounded-br-3xl z-0"></div>
             <div className="absolute top-0 w-full h-[280px] bg-[#fff] z-[-1]"></div>
-            <div className="relative cardHolder pt-[34px] flex gap-8 w-[70rem] mx-auto h-[480px] mb-12 z-10">
+
+            <div className="relative cardHolder pt-[34px] flex  flex-wrap gap-8 w-[70rem] mx-auto min-h-[480px] mb-12 z-10">
+              
               {/* Card */}
               <div className="w-[22rem] h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
@@ -147,6 +153,7 @@ function landing() {
                   </div>
                 </div>
               </div>
+
               {/* Card */}
               <div className="w-[22rem] h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
