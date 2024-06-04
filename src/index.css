@@ -7,7 +7,7 @@
 @media (min-width: 440px) {
 
 .earth-mobile{
-  height: 834px;
+  height: 634px;
 }
 
 .earth-mobile-text{
@@ -19,7 +19,6 @@
 @media (max-width: 440px) {
 
 .earth-mobile{
-
   height: 431px;
 }
 .earth-mobile-text{
@@ -46,14 +45,21 @@
     }
 
     .w-card-landing{
-      width: 40%;
+      width: 337px;
+    }
+
+    .w-main-landing-card-holder {
+     justify-content: center;
+    }
+    .height-text-landing {
+      height: 350px;
     }
 }
 
 @media (min-width: 1150px) {
 
   .w-card-landing{
-    width: 31%;
+    width: 352px;
   }
 }
 
@@ -62,16 +68,29 @@
 
     .w-main-landing-card {
       min-height: 1000px;
+    
     }
+    .w-main-landing-card-holder {
+      justify-content: center;
+     }
     .w-navbar-holder{
       width: 1024px;
       /* background-color: aqua; */
     }
     .height-main-div{
-      height: 1000px;
+      height: 1050px;
       /* background-color: aqua; */
     }
 }
+
+@media (min-width: 1000px) {
+  .height-main-div{
+    height: 1250px;
+    /* background-color: aqua; */
+  }
+
+}
+
 
 @media (min-width: 1700px) {
     .w-main-landing {
@@ -92,7 +111,7 @@
       height: max-content;
     }
     .w-main-landing-div {
-      min-height: 1300px;
+      min-height: 1000px;
     }
 }
 
@@ -102,7 +121,39 @@
       height: max-content;
     }
     .w-main-landing-div {
-      min-height: 2000px;
+      min-height: 1800px;
     }
+}
+
+
+
+
+.responsive-container {
+  width: 533px;
+  overflow-y: hidden;
+  height: auto; /* Ensure the container adjusts height based on content */
+}
+
+.responsive-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 3vw; /* Responsive font size */
+  line-height: 1.5; /* Relative line height */
+  padding: 0 1rem; /* Add padding to avoid text touching the edges */
+}
+
+@media (max-width: 600px) {
+  .responsive-text {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1600px) {
+  .responsive-text {
+    font-size: 2vw; /* Adjust font size for larger screens */
+    line-height: 1.8;
+  }
 }
 

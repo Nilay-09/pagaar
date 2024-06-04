@@ -82,7 +82,7 @@ export default function LandingMobile() {
         </div>
         </div>
 
-        <div className="w-full min-h-[420px] flex flex-col relative earth-mobile">
+        <div className="w-full flex flex-col relative earth-mobile">
           <div className="min-h-[290px] bg-[#683BE8]"></div>
 
           <div className="flex-1 bg-[#fff]"></div>
@@ -92,13 +92,13 @@ export default function LandingMobile() {
       </div>
 
       <div className="w-full mt-6 flex justify-center items-center flex-col px-6 gap-7">
-        <div className="w-full min-h-max custom-shadow-mobile-card rounded-[34.75px]">
+        <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C1} alt="" />
         </div>
-        <div className="w-full min-h-max custom-shadow-mobile-card rounded-[34.75px]">
+        <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C2} alt="" />
         </div>
-        <div className="w-full min-h-max custom-shadow-mobile-card rounded-[34.75px]">
+        <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C3} alt="" />
         </div>
       </div>

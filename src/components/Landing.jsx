@@ -34,18 +34,16 @@ function landing() {
   return (
     <>
       <div className="w-screen min-h-screen pt-[3.5rem] relative">
-
         <div className="w-full h-[3.375rem] b">
-        {/* Navbar */}
-        <div className="w-[64rem] h-full  mx-auto flex justify-between w-navbar-holder">
-    
-          <div className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
-            <PagaarLogoF />
+          {/* Navbar */}
+          <div className="w-[64rem] h-full  mx-auto flex justify-between w-navbar-holder">
+            <div className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
+              <PagaarLogoF />
+            </div>
+            <div className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow">
+              Join Waiting List
+            </div>
           </div>
-          <div className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow">
-            Join Waiting List
-          </div>
-        </div>
         </div>
 
         {/* Main Div */}
@@ -105,8 +103,8 @@ function landing() {
 
           <div className="w-[100%] bg-[#683BE8] ">
             <div className="flex px-[112px] gap-[88px] justify-center items-center">
-              <div className="w-[533px] overflow-y-hidden  ">
-                <div className="poppins-600 text-[#fff] text-[38px] leading-[56px] ">
+              <div class="w-[533px] overflow-y-hidden height-text-landing responsive-container">
+                <div class="poppins-600 text-[#fff] text-[38px] leading-[56px] responsive-text">
                   Get instant real-time alerts of all the openings on the
                   internet
                 </div>
@@ -126,8 +124,7 @@ function landing() {
             <div className="absolute top-0 w-full h-[190px] bg-[#683BE8] rounded-bl-3xl rounded-br-3xl z-0"></div>
             <div className="absolute top-0 w-full h-[280px] bg-[#fff] z-[-1]"></div>
 
-            <div className="relative cardHolder pt-[34px] flex  flex-wrap gap-8 w-[90%] w-main-landing-card-holder mx-auto min-h-[480px] mb-12 z-10">
-              
+            <div className="relative  flex cardHolder pt-[34px]  flex-wrap gap-8 w-[90%] w-main-landing-card-holder mx-auto min-h-[480px] mb-12 z-10">
               {/* Card */}
               <div className="w-card-landing h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
@@ -213,7 +210,9 @@ function landing() {
             </div>
 
             <div className="w-full text-center mt-7">
-              <span className="poppins-400 text-[#777E90] text-[12px] leading-5">©2021, Unbook Solutions Pvt Ltd</span>
+              <span className="poppins-400 text-[#777E90] text-[12px] leading-5">
+                ©2021, Unbook Solutions Pvt Ltd
+              </span>
             </div>
           </div>
         </div>
