@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LOGO from '../../assets/landingMobile/PagaarLogo.svg'
 import MainImage from '../../assets/landingMobile/MainImage.svg'
 import DownloadIcon from '../../assets/landingMobile/DownloadIcon.svg'
@@ -16,13 +16,31 @@ import ipad from "../../assets/landingMobile/ipad.svg";
 import bgEC from "../../assets/landingMobile/bgEC.svg";
 import Link from "../../assets/landingMobile/Link.svg";
 import FooterBackGround from "../../assets/landingMobile/tikki2.svg";
+import ShowModal from '../ShowModal'
+import ShowRegistrationModal from '../ShowRegistrationModal'
 
 
 export default function LandingMobile() {
+
+
+  const [closeModal, setCloseModal] = useState(true);
+
+  const closeModalByClick = () => {
+    setCloseModal(true);
+  };
+
+  const [closeModalReg, setCloseModalReg] = useState(true);
+
+  const closeModalRegByClick = () => {
+    setCloseModalReg(true);
+  };
+
   return (
     <div className="w-screen min-h-screen relative">
       {/* LOGO */}
-      <div className="w-full h-[5.625rem] flex justify-center items-center">
+      <div 
+      onClick={()=>setCloseModalReg(false)}
+      className="w-full h-[5.625rem] flex justify-center items-center">
         <img src={LOGO} alt="" />
       </div>
 
@@ -36,7 +54,10 @@ export default function LandingMobile() {
         </div>
 
         {/* Button */}
+        {!closeModalReg && <ShowRegistrationModal closeModalRegByClick={closeModalRegByClick}/>}
+        {!closeModal && <ShowModal closeModalByClick={closeModalByClick}/>}
         <div
+        onClick={()=>setCloseModal(false)}
           className="mx-auto w-[14.125rem] h-[60px] bg-[#28293D] mt-12 flex justify-center items-center poppins-600 text-[18.46px] text-[#fff]
                         border-[#fff] border-[1.15px] rounded custom-shadow-button-mobile mb-2"
         >
@@ -86,7 +107,7 @@ export default function LandingMobile() {
           <div className="min-h-[290px] bg-[#683BE8]"></div>
 
           <div className="flex-1 bg-[#fff]"></div>
-          <img src={Earth} alt="" className="absolute inset-0 w-full object-cover h-full z-20" />
+          <img src={Earth} alt="" className="absolute right-0 top-0 w-full sm:w-[80%] object-cover h-full sm:h-[80%] z-20" />
         </div>
 
       </div>

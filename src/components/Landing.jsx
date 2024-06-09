@@ -12,6 +12,9 @@ import AppStoreIcon from "../assets/landing/app-store.svg";
 import IpadImage from "../assets/landing/ipad.svg";
 import Earth from "../assets/landing/earth2.svg";
 import Rocket from "../assets/landing/rocket.svg";
+
+import Hands from "../assets/landing/hathmepakdtahua.svg";
+import ManWithFlag from "../assets/landing/jitegaadmi.svg";
 import CircleSecondSvg from "../assets/landing/CircleSecondSvg";
 import FooterBackGround from "../assets/landing/Tikka.svg";
 import X from "../assets/landing/X.svg";
@@ -37,10 +40,16 @@ function landing() {
         <div className="w-full h-[3.375rem] b">
           {/* Navbar */}
           <div className="w-[64rem] h-full  mx-auto flex justify-between w-navbar-holder">
-            <div className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
+            <div 
+            onClick={()=>setCloseModalReg(false)}
+            className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
               <PagaarLogoF />
             </div>
-            <div className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow">
+            {!closeModal && <ShowModal closeModalByClick={closeModalByClick}/>}
+            {!closeModalReg && <ShowRegistrationModal closeModalRegByClick={closeModalRegByClick}/>}
+            <div
+            onClick={()=>setCloseModal(false)}
+             className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow">
               Join Waiting List
             </div>
           </div>
@@ -140,7 +149,7 @@ function landing() {
               {/* Card */}
               <div className="w-card-landing min-h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
-                  <img src={Rocket} alt="" />
+                  <img src={Hands} alt="" />
                 </div>
                 {/* //box */}
                 <div className="bg-[#141416] w-full min-h-[380px] rounded-[32px] text-[#E6E8EC] pt-[11rem] pl-[48px] pr-[54px] text-[24px] leading-[32px]">
@@ -154,7 +163,7 @@ function landing() {
               {/* Card */}
               <div className="w-card-landing min-h-[27.25rem] pt-[50px] relative">
                 <div className="absolute top-0 left-0">
-                  <img src={Rocket} alt="" />
+                  <img src={ManWithFlag} alt="" />
                 </div>
                 {/* //box */}
                 <div className="bg-[#141416] w-full min-h-[380px] rounded-[32px] text-[#E6E8EC] pt-[11rem] pl-[48px] pr-[54px] text-[24px] leading-[32px]">

@@ -11,7 +11,7 @@
 }
 
 .earth-mobile-text{
-  width: 382px;
+  width: 482px;
 }
 
 
@@ -50,6 +50,7 @@
 
     .w-main-landing-card-holder {
      justify-content: center;
+     width: 100%;
     }
     .height-text-landing {
       height: 350px;
@@ -59,7 +60,7 @@
 @media (min-width: 1150px) {
 
   .w-card-landing{
-    width: 352px;
+    width: 332px;
   }
 }
 
@@ -83,7 +84,7 @@
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .height-main-div{
     height: 1250px;
     /* background-color: aqua; */
@@ -111,17 +112,16 @@
       height: max-content;
     }
     .w-main-landing-div {
-      min-height: 1000px;
+      min-height: 1600px;
     }
 }
 
 @media (min-width: 2200px) {
     .w-main-landing {
       margin: 0px 260px;
-      height: max-content;
     }
     .w-main-landing-div {
-      min-height: 1800px;
+      min-height: 2000px;
     }
 }
 

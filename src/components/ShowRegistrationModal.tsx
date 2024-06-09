@@ -1,18 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import { RxCross2 } from 'react-icons/rx';
 import { useNavigate } from 'react-router-dom';
 
 
 function ShowRegistrationModal({ closeModalRegByClick }) {
   const [isOtpDialogeVisible, setIsOtpDialogeVisible] = useState(false);
   const [otp, setOtp] = useState(new Array(4).fill(""));
+  const [otpFromServer, setOtpFromServer] = useState(null);
   const [isOtpComplete, setIsOtpComplete] = useState(false);
   const [isOtpValid, setIsOtpValid] = useState(true); 
   const navigate = useNavigate();// New state to track OTP validity
 
   useEffect(() => {
-    document.body.style.overflowY = 'hidden';
+    const preventScroll = (e) => {
+      e.preventDefault();
+    };
+
+    // Add event listeners to prevent scrolling
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+
     return () => {
-      document.body.style.overflowY = '';
+      // Remove event listeners when the modal is closed
+      window.removeEventListener('wheel', preventScroll);
+      window.removeEventListener('touchmove', preventScroll);
     };
   }, []);
 
@@ -30,9 +41,38 @@ function ShowRegistrationModal({ closeModalRegByClick }) {
     setIsOtpComplete(otp.every(value => value !== ""));
   }, [otp]);
 
-  const handleGetOtpClick = () => {
-    setIsOtpDialogeVisible(true);
-  };
+
+  const handleGetOtpClick = async () => {
+    const phoneNumber = '919172229750'; // Replace with dynamic value if needed
+    const url = `https://pagaar-backend.azurewebsites.net/login/generateOtp?phone-number=${phoneNumber}`;
+    // const url = `https://httpbin.org/anything`;
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Request-Id': 'hrt', 
+                'X-User-Id': 'hrt@123'
+            },
+        });
+
+        const responseData = await response.json();
+        console.log('Response data:', responseData);
+
+        setOtpFromServer(responseData.otp)
+        if (response.ok) {
+          console.log(response)
+            setIsOtpDialogeVisible(true);
+        } else {
+            console.error('Failed to generate OTP', response.status);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+
+
 
   const handleOtpChange = (element, index) => {
     const value = element.value;
@@ -80,30 +120,62 @@ function ShowRegistrationModal({ closeModalRegByClick }) {
     }
   };
 
-  const handleVerifyClick = () => {
-    const enteredOtp = otp.join('');
-    if (enteredOtp === '2222') {
-      // Perform verification logic here if OTP is correct
-      console.log('OTP is correct');
-      setIsOtpValid(true);
-      navigate('/registration');
-    } else {
-      // Set OTP validity to false to apply red border
+ 
+
+
+
+
+  const handleVerifyClick = async () => {
+    const enteredOtp = otp.join(''); 
+    const phoneNumber = '919172229750'; 
+  
+    try {
+      // Make a request to validate the OTP
+      const response = await fetch(`https://pagaar-backend.azurewebsites.net/login/validateOtp?phone-number=${phoneNumber}&otp=${enteredOtp}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-User-Id': '349d5e6c-d79-ff04-8388-1099c53cb3b4',
+          'X-Request-Id': 'hrt'  
+        },
+        
+      });
+  
+      if (response.ok) {
+
+          console.log('OTP is correct');
+          setIsOtpValid(true);
+          navigate('/registration');
+        } else {
+          console.error('OTP validation failed');
+          setIsOtpValid(false);
+        }
+    } catch (error) {
+      console.error('Error:', error);
       setIsOtpValid(false);
     }
   };
 
+  
+
+
   return (
     <div>
-      <div 
-        className="modal-wrapper bg-[#00000033] fixed top-0 left-0 right-0 bottom-0"
+      <div
+        className="modal-wrapper bg-[#00000033] fixed top-0 left-0 right-0 bottom-0 z-50"
         onClick={() => closeModalRegByClick()}
       ></div>
 
-      <div className="z-20 fixed w-[544px] bg-white py-[36px] px-[32px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#000000] border-[1px] rounded-[8px]">
+      <div className="fixed w-[90%] sm:w-[544px] bg-white py-[36px] px-[32px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#000000] border-[1px] rounded-[8px] z-50">
         {!isOtpDialogeVisible ? (
           <>
-            <div className="flex flex-col gap-2 w-full justify-center px-[19px] py-2">
+            <div className="flex flex-col gap-2 w-full justify-center px-4 sm:px-[19px] py-6 sm:py-2">
+              <div className="flex justify-end items-center h-10 aspect-square sm:h-10 py-2 overflow-hidden">
+                <RxCross2
+                  onClick={() => closeModalRegByClick()}
+                  className="text-[#868686] h-full w-6 sm:w-10 cursor-pointer"
+                />
+              </div>
               <div className="poppins-600 text-[28.87px] leading-[43.41px] text-[#28293D] text-center">
                 Register Your Mobile Number
               </div>
@@ -112,15 +184,15 @@ function ShowRegistrationModal({ closeModalRegByClick }) {
               </div>
             </div>
             <div className="py-[19.24px] pt-[19.24px] pb-[8.2px] flex flex-col items-center gap-[8px]">
-              <input 
+              <input
                 type="text"
-                className="border-[2.22px] p-[11.1px] w-[307.1px] h-[43.31px] rounded border-[#000000] custom-shadow-modal text-[16px] leading-[24px] placeholder-[#000] poppins-400"
+                className="border-[2.22px] p-[11.1px] w-full sm:w-[307.1px] h-[43.31px] rounded border-[#000000] custom-shadow-modal text-[16px] leading-[24px] placeholder-[#000] poppins-400"
                 placeholder="+91"
               />
             </div>
-            <div className="mt-[41px] pt-[12.83px] w-full pb-[36px] flex justify-center">
-              <div 
-                className="w-[300px] h-[50px] bg-[#BDA6FF] flex justify-center items-center poppins-700 border-[2px] border-[#000000] custom-shadow-modal-button cursor-pointer"
+            <div className="mt-[32px] w-full flex justify-center">
+              <div
+                className="w-full sm:w-[300px] h-[50px] bg-[#BDA6FF] flex justify-center items-center poppins-700 border-[2px] border-[#000000] custom-shadow-modal-button cursor-pointer"
                 onClick={handleGetOtpClick}
               >
                 Get OTP
@@ -129,36 +201,55 @@ function ShowRegistrationModal({ closeModalRegByClick }) {
           </>
         ) : (
           <>
-            <div className="flex flex-col gap-2 w-full justify-center px-[19px] py-2">
+            <div className="flex flex-col gap-2 w-full justify-center px-4 sm:px-[19px] py-6 sm:py-2">
+              <div className="flex justify-end items-center h-10 aspect-square sm:h-6 py-2 overflow-hidden">
+                <RxCross2
+                  onClick={() => closeModalRegByClick()}
+                  className="text-[#868686] h-full w-6 cursor-pointer"
+                />
+              </div>
               <div className="poppins-600 text-[28.87px] leading-[43.41px] text-[#28293D] text-center">
-                Enter OTP
+                Register Your Mobile Number
               </div>
               <div className="poppins-400 text-[14px] text-[#555770] text-center">
-                Please enter the OTP sent to your mobile number
+                We will share a one-time password on your mobile number
               </div>
             </div>
             <div className="pt-2 pb-6 flex justify-center gap-4 ">
               {otp.map((data, i) => (
-                <input 
-                  type="text" 
-                  className={`w-[54px] h-[50px] rounded-[13.21px] border-[2.56px] custom-shadow-modal-otp text-center text-[24px] poppins-400 ${otp[i] ? 'border-[#BDA6FF]' : 'border-black'} ${!isOtpValid ? 'border-[#FFBEBE]' : ''}`}
+                <input
+                  type="text"
+                  className={`w-[54px] h-[50px] rounded-[13.21px] border-[2.56px] custom-shadow-modal-otp text-center text-[24px] poppins-400 ${
+                    otp[i] ? "border-[#BDA6FF]" : "border-black"
+                  } ${!isOtpValid ? "border-[#FFBEBE]" : ""}`}
                   maxLength={1}
                   key={i}
                   value={otp[i]}
-                  onChange={e => handleOtpChange(e.target, i)}
+                  onChange={(e) => handleOtpChange(e.target, i)}
                   id={`otp-${i}`}
                   onFocus={(e) => handleFocusBlur(e, i)}
                   onBlur={(e) => handleFocusBlur(e, i)}
-                  onKeyDown={e => handleKeyDown(e, i)}
+                  onKeyDown={(e) => handleKeyDown(e, i)}
                   onKeyPress={handleKeyPress}
                 />
               ))}
             </div>
-            <div className="text-[#555770] poppins-500">Resend OTP In <span className='text-[#3C95E9] poppins-600'>30s</span></div>
+            <div className="text-[#555770] poppins-500 flex justify-between">
+
+              <div className="">
+              Resend OTP In{" "}
+              <span className="text-[#3C95E9] poppins-600">30s</span>
+              </div>
+             <div className={` ${isOtpValid ? 'hidden' : 'flex' } poppins-500 font-[0.875rem] text-[#FF0000]`}>Invalid OTP</div>
+            </div>
             <div className="mt-[12px] pt-[12.83px] w-full pb-[36px] flex justify-center">
-              <div 
-                className={`w-[300px] h-[50px] flex justify-center items-center poppins-700 border-[2px] border-[#000000] custom-shadow-modal-otp rounded-[13px] ${isOtpComplete ? "cursor-pointer bg-[#BDA6FF]" : "cursor-not-allowed bg-[#BABABA]"}`}
-                onClick={isOtpComplete ? handleVerifyClick : () => {}} // Use a no-op function when OTP is not complete
+              <div
+                className={`w-[300px] h-[50px] flex justify-center items-center poppins-700 border-[2px] border-[#000000] custom-shadow-modal-otp rounded-[13px] ${
+                  isOtpComplete
+                    ? "cursor-pointer bg-[#BDA6FF]"
+                    : "cursor-not-allowed bg-[#BABABA]"
+                }`}
+                onClick={isOtpComplete ? handleVerifyClick : () => {}}
               >
                 Verify
               </div>
