@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import CheckRight from '../assets/landing/checkRight.png'
+import CheckRight from '../assets/landing/Right.svg'
 import { BiCross } from 'react-icons/bi';
 import { RxCross2 } from 'react-icons/rx';
+import Whatsapp from '../assets/landing/whatsapp.svg'
 
 function ShowModal({ closeModalByClick }) {
 
@@ -120,18 +121,29 @@ function ShowModal({ closeModalByClick }) {
             </div>
           </>
         ) : (
-          <div className="text-center flex flex-col gap-1">
-            <div className="flex justify-center">
+          <div className="text-center flex flex-col items-center gap-1">
+            <div className="flex justify-center mb-1">
               {" "}
               <img src={CheckRight} alt="" />
             </div>
-            <div className="text-[29px] w-full text-[#28293D] poppins-700 leading-[43.31px]">
+            <div className="text-[24px] w-full text-[#28293D] poppins-700 leading-[43.31px]">
               Thank You!
             </div>
-            <div className="text-[14.44px] w-full text-[#28293D] poppins-400">
-              We have received your details and will contact you soon.
+            <div className="text-[14.44px] text-center w-full max-w-[441px] text-[#555770] poppins-400">
+             Your response has been collected. Be one of the first to experience Pagaar, join the exclusive WhatsApp group.
             </div>
-            <div className="pt-4 flex flex-col items-center"></div>
+            <div className="pt-4 flex flex-col items-center">
+              <div
+                className="w-full mb-2 text-[#28293D] max-w-[301px] sm:w-[301px] h-[52px] bg-[#BDA6FF] poppins-black flex justify-center rounded items-center gap-2 border-[1.4px] border-[#000000] custom-shadow-modal cursor-pointer"
+                onClick={handleButtonClick}
+              >
+              <img src={Whatsapp}/>
+                <a href='https://chat.whatsapp.com/HTpZyZQrRUX4jbI3EwFanU' className='flex self-center text-[0.875rem]'>
+                Join us on Whatsapp
+                </a>
+              </div>
+
+            </div>
           </div>
         )}
       </div>

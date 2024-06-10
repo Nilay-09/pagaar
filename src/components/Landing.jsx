@@ -12,6 +12,7 @@ import AppStoreIcon from "../assets/landing/app-store.svg";
 import IpadImage from "../assets/landing/ipad.svg";
 import Earth from "../assets/landing/earth2.svg";
 import Rocket from "../assets/landing/rocket.svg";
+import Layer from "../assets/landing/layer.svg";
 
 import Hands from "../assets/landing/hathmepakdtahua.svg";
 import ManWithFlag from "../assets/landing/jitegaadmi.svg";
@@ -56,12 +57,14 @@ function landing() {
         </div>
 
         {/* Main Div */}
-        <div className="w-full h-[877px] relative bg-gradient-to-b from-white to-[#D3C4FF]">
+        <div className="w-full h-[877px] relative bg-gradient-to-b from-white to-[#D3C4FF] overflow-y-hidden">
           <div className="absolute inset-0 z-0 overflow-y-hidden w-full">
             <BackgroundMainLogo />
           </div>
 
-          <div className="absolute bottom-0 z-10  outline-none border-none h-[100px] lg:h-[50px] bg-white w-full"/>
+          <div className="absolute bottom-[-20px] left-[-10px] right-[-10px] overflow-y-hidden outline-none blur-[4px] bg-white border-none h-[100px] lg:h-[50px] z-20 w-[110%]">
+            {/* <img src={Layer} alt="" className=""/>  */}
+          </div>
 
 
           <div className="z-10 mt-[80px] w-full ">

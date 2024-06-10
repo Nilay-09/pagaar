@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import LOGO from '../../assets/landingMobile/PagaarLogo.svg'
-import MainImage from '../../assets/landingMobile/MainImage.svg'
+import MainImage from '../../assets/landingMobile/herosection.svg'
 import DownloadIcon from '../../assets/landingMobile/DownloadIcon.svg'
 import PlayStore from '../../assets/landingMobile/play-store.svg'
 import AppStore from '../../assets/landingMobile/app-store.svg'
@@ -68,7 +68,7 @@ export default function LandingMobile() {
       {/* Image Holder */}
 
       <div className="mt-6 w-full min-h-[27.3125rem]">
-        <img src={MainImage} alt="" />
+        <img src={MainImage} alt="" className='mx-auto'/>
       </div>
 
       {/* Download */}

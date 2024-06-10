@@ -75,7 +75,31 @@
     box-shadow: 1.4px 1.4px rgba(0, 0, 0);
 }
 
-
+/* The main container */
+.container {
+    position: relative; /* Enables absolute positioning for the pseudo-element */
+    width: 100%; /* Full width */
+    height: 200px; /* Set a height as needed */
+    background-color: #ffffff; /* Background color, white in this case */
+    overflow: hidden; /* Ensures the blur effect does not extend outside the container */
+    border: 1px solid #ccc; /* Optional: For visibility of the container */
+  }
+  
+  /* Pseudo-element to create the top blur effect */
+  .container::before {
+    content: ''; /* Necessary for pseudo-element */
+    position: absolute; /* Positioned relative to the container */
+    top: 0; /* Positioned at the top */
+    left: 0; /* Full width from left */
+    width: 100%; /* Full width */
+    height: 50px; /* Adjust height to control the blur spread */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Gradient from white to transparent */
+    filter: blur(10px); /* Apply blur effect */
+    pointer-events: none; /* Prevent interaction interference */
+  }
+  
+  
+  
 
 input:focus{
     outline: none;
