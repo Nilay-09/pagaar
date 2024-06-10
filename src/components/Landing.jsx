@@ -42,7 +42,7 @@ function landing() {
           {/* Navbar */}
           <div className="w-[75%] h-full mx-auto flex justify-between">
             <div 
-            onClick={()=>setCloseModalReg(false)}
+            // onClick={()=>setCloseModalReg(false)}
             className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
               <PagaarLogoF />
             </div>

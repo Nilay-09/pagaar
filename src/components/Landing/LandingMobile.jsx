@@ -39,7 +39,7 @@ export default function LandingMobile() {
     <div className="w-screen min-h-screen relative">
       {/* LOGO */}
       <div 
-      onClick={()=>setCloseModalReg(false)}
+      // onClick={()=>setCloseModalReg(false)}
       className="w-full h-[5.625rem] flex justify-center items-center">
         <img src={LOGO} alt="" />
       </div>

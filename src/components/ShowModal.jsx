@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CheckRight from '../assets/landing/Right.svg'
-import { BiCross } from 'react-icons/bi';
 import { RxCross2 } from 'react-icons/rx';
 import Whatsapp from '../assets/landing/whatsapp.svg'
 
