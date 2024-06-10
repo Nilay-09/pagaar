@@ -47,7 +47,7 @@ export default function LandingMobile() {
       {/* Title Holder */}
 
       <div className="">
-        <div className="w-full px-6 pt-[5.75rem]">
+        <div className="w-full max-w-[551px] mx-auto px-6 pt-[5.75rem]">
           <div className="poppins-700 text-[40px] leading-[56px] text-center">
             Get all jobs on the internet in one place.
           </div>
@@ -112,7 +112,7 @@ export default function LandingMobile() {
 
       </div>
 
-      <div className="w-full mt-6 flex justify-center items-center flex-col px-6 gap-7">
+      <div className="w-full pb-16 mt-6 flex justify-center items-center flex-col px-6 gap-7">
         <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C1} alt="" />
         </div>
@@ -140,17 +140,7 @@ export default function LandingMobile() {
             </div>
           </div>
 
-          <div className="w-full mt-8 mx-auto flex justify-between">
-            <span>
-              {" "}
-              <img src={AppStore} alt="" />{" "}
-            </span>
-            <span>
-              {" "}
-              <img src={PlayStore} alt="" />{" "}
-            </span>
-          </div>
-
+          
           <div className="text-[17px] flex gap-[20px] mt-[30px] justify-center leading-[24px] text-[#777E90] poppins-500">
             <span className="">Privacy Policy</span>
             <span className="">team@pagaar.io</span>

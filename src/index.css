@@ -32,14 +32,8 @@
 
 @media (min-width: 770px) {
 
-    .w-navbar-holder{
-      width: 700px;
-      /* background-color: aqua; */
-    }
-    .height-main-div{
-      height: 700px;
-      /* background-color: aqua; */
-    }
+
+
     .earth-img{
       height: 100%;
     }
@@ -74,38 +68,13 @@
     .w-main-landing-card-holder {
       justify-content: center;
      }
-    .w-navbar-holder{
-      width: 1024px;
-      /* background-color: aqua; */
-    }
-    .height-main-div{
-      height: 1050px;
-      /* background-color: aqua; */
-    }
-}
 
-@media (min-width: 1200px) {
-  .height-main-div{
-    height: 1250px;
-    /* background-color: aqua; */
-  }
 
 }
 
 
-@media (min-width: 1700px) {
-    .w-main-landing {
-      margin: 0px 260px;
-      height: max-content;
-    }
-    .w-main-landing-div {
-      min-height: 1000px;
-    }
 
-    .w-main-landing-card-holder {
-        width: 70rem;
-      }
-}
+
 @media (min-width: 1900px) {
     .w-main-landing {
       margin: 0px 260px;

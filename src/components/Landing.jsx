@@ -37,9 +37,9 @@ function landing() {
   return (
     <>
       <div className="w-screen min-h-screen pt-[3.5rem] relative">
-        <div className="w-full h-[3.375rem] b">
+        <div className="w-full h-[3.375rem] ">
           {/* Navbar */}
-          <div className="w-[64rem] h-full  mx-auto flex justify-between w-navbar-holder">
+          <div className="w-[75%] h-full mx-auto flex justify-between">
             <div 
             onClick={()=>setCloseModalReg(false)}
             className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
@@ -56,13 +56,16 @@ function landing() {
         </div>
 
         {/* Main Div */}
-        <div className="w-full w-main-landing-div px-[4rem] height-main-div  relative">
-          <div className="absolute inset-0 z-0 overflow-y-hidden w-main-landing">
+        <div className="w-full h-[877px] relative bg-gradient-to-b from-white to-[#D3C4FF]">
+          <div className="absolute inset-0 z-0 overflow-y-hidden w-full">
             <BackgroundMainLogo />
           </div>
 
+          <div className="absolute bottom-0 z-10  outline-none border-none h-[100px] lg:h-[50px] bg-white w-full"/>
+
+
           <div className="z-10 mt-[80px] w-full ">
-            <div className=" bg-white mx-auto w-[551px] flex flex-col">
+            <div className="mx-auto w-[551px] flex flex-col">
               {/* Heading */}
               <div className="flex flex-col gap-[52px] justify-between">
                 <div className="poppins-700 text-[42px] text-center leading-[56px] overflow-y-hidden z-20">
@@ -183,7 +186,7 @@ function landing() {
           </div>
 
           {/* Box */}
-          <div className="mt-[84px] w-[305px] ">
+          <div className="mt-[124px] w-[305px] ">
             <div className="w-full flex flex-col items-center justify-between min-h-[106px]">
               <div className="w-[124px] flex justify-center items-center">
                 <PagaarLogoF />
@@ -194,16 +197,6 @@ function landing() {
               </div>
             </div>
 
-            <div className="w-full mt-8 mx-auto flex justify-between">
-              <span>
-                {" "}
-                <img src={AppStoreIcon} alt="" />{" "}
-              </span>
-              <span>
-                {" "}
-                <img src={PlayStoreIcon} alt="" />{" "}
-              </span>
-            </div>
 
             <div className="text-[17px] flex gap-[20px] mt-[30px] justify-center leading-[24px] text-[#777E90] poppins-500">
               <span className="">Privacy Policy</span>
