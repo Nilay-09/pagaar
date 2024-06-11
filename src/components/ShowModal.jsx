@@ -55,6 +55,7 @@ function ShowModal({ closeModalByClick }) {
         console.log(response)
         setIsThankYouMessageVisible(true);
       } else {
+        console.log(response)
         console.error('Failed to create waitlist', response.status, await response.text());
       }
     } catch (error) {
@@ -131,9 +132,9 @@ function ShowModal({ closeModalByClick }) {
             <div className="text-[14.44px] text-center w-full max-w-[441px] text-[#555770] poppins-400">
              Your response has been collected. Be one of the first to experience Pagaar, join the exclusive WhatsApp group.
             </div>
-            <div className="pt-4 flex flex-col items-center">
+            <div className="w-full pt-4 flex flex-col items-center">
               <div
-                className="w-full mb-2 text-[#28293D] max-w-[301px] sm:w-[301px] h-[52px] bg-[#BDA6FF] poppins-black flex justify-center rounded items-center gap-2 border-[1.4px] border-[#000000] custom-shadow-modal cursor-pointer"
+                className="w-full mb-2 text-[#28293D]  sm:w-[301px] h-[52px] bg-[#BDA6FF] poppins-black flex justify-center rounded items-center gap-2 border-[1.4px] border-[#000000] custom-shadow-modal cursor-pointer"
                 onClick={handleButtonClick}
               >
               <img src={Whatsapp}/>
