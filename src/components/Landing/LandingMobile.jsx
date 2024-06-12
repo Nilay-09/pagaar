@@ -80,9 +80,9 @@ export default function LandingMobile() {
           <span>Coming Soon On</span>
         </div>
 
-        <div className="mt-[40px] w-[304px] mx-auto flex gap-4">
-          <img src={AppStore} alt="" />
+        <div className="mt-[40px] w-full justify-center mx-auto flex gap-4">
           <img src={PlayStore} alt="" />
+          <img src={AppStore} alt="" />
         </div>
       </div>
 

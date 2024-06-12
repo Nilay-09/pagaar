@@ -88,14 +88,15 @@ function landing() {
                 </div>
               </div>
               <div className="flex pt-10 z-20">
-                <div className="w-[310px] mx-auto flex justify-between">
-                  <span>
-                    {" "}
-                    <img src={AppStoreIcon} alt="" />{" "}
-                  </span>
+                <div className="w-full mx-auto flex gap-4 justify-center">
                   <span>
                     {" "}
                     <img src={PlayStoreIcon} alt="" />{" "}
+                  </span>
+                  <span>
+                    {" "}
+                   
+                    <img src={AppStoreIcon} alt="" />{" "}
                   </span>
                 </div>
               </div>
