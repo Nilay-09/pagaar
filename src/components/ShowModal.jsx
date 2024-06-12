@@ -56,10 +56,13 @@ function ShowModal({ closeModalByClick }) {
         console.log(response);
         setIsThankYouMessageVisible(true);
       } else {
-        setIsError(true); // Set error state
-        setErrorMessage('Email Already Exist Or Mobile Number Already Exist'); // Set error message
+        setIsError(true);
+        setErrorMessage('Email Already Exist Or Mobile Number Already Exist');
         console.log(response);
         console.error('Failed to create waitlist', response.status, await response.text());
+        setTimeout(() => {
+          setIsError(false);
+        }, 2000);
       }
     } catch (error) {
       setIsError(true); // Set error state
