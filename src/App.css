@@ -75,6 +75,10 @@
     box-shadow: 1.4px 1.4px rgba(0, 0, 0);
 }
 
+.custom-shadow-modal-button-2 {
+    box-shadow: 1.4px 1.4px rgba(0, 0, 0);
+}
+
 /* The main container */
 .container {
     position: relative; /* Enables absolute positioning for the pseudo-element */
