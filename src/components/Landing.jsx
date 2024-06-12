@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import PagaarLogo from "../assets/landing/PagaarLogo.svg";
+import LOGO from '../assets/landingMobile/LogoFinal.png'
 
 import ShowModal from "./ShowModal";
 import ShowRegistrationModal from "./ShowRegistrationModal";
@@ -46,7 +47,7 @@ function landing() {
             <div 
             // onClick={()=>setCloseModalReg(false)}
             className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
-              <PagaarLogoF />
+              <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' />
             </div>
             {!closeModal && <ShowModal closeModalByClick={closeModalByClick}/>}
             {!closeModalReg && <ShowRegistrationModal closeModalRegByClick={closeModalRegByClick}/>}
@@ -196,7 +197,7 @@ function landing() {
           <div className="mt-[124px] w-[305px] ">
             <div className="w-full flex flex-col items-center justify-between min-h-[106px]">
               <div className="w-[124px] flex justify-center items-center">
-                <PagaarLogoF />
+              <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' />
               </div>
 
               <div className="text-[1.125rem] leading-[24px] text-[#E6E8EC] poppins-600">

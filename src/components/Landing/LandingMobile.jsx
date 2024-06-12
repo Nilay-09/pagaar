@@ -132,7 +132,7 @@ export default function LandingMobile() {
         <div className="w-[19rem] mx-auto">
           <div className="w-full flex flex-col items-center justify-between min-h-[106px]">
             <div className="w-[124px] flex justify-center items-center">
-              <PagaarLogoF />
+            <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' />
             </div>
 
             <div className="text-[1.125rem] leading-[24px] text-[#98BAFF] poppins-600 overflow-y-hidden">
