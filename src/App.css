@@ -79,6 +79,13 @@
     box-shadow: 1.4px 1.4px rgba(0, 0, 0);
 }
 
+
+.logo{
+    image-rendering: -webkit-optimize-contrast; /* Safari */
+    image-rendering: crisp-edges;               /* Firefox */
+    image-rendering: pixelated;                 /* Chrome and Opera */
+  }
+
 /* The main container */
 .container {
     position: relative; /* Enables absolute positioning for the pseudo-element */

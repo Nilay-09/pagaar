@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-// import PagaarLogo from "../assets/landing/PagaarLogo.svg";
+import PagaarLogo from "../assets/landing/PagaarLogo.svg";
 
 import ShowModal from "./ShowModal";
 import ShowRegistrationModal from "./ShowRegistrationModal";
+
+
 import PagaarLogoF from "../assets/landing/PagaarLogoF";
 import BackgroundMainLogo from "../assets/landing/BackgroundMainLogo";
 import DownloadIcon from "../assets/landing/DownloadIcon.svg";
@@ -12,7 +14,7 @@ import AppStoreIcon from "../assets/landing/app-store.svg";
 import IpadImage from "../assets/landing/ipad.svg";
 import Earth from "../assets/landing/earth2.svg";
 import Rocket from "../assets/landing/rocket.svg";
-import Layer from "../assets/landing/layer.svg";
+
 
 import Hands from "../assets/landing/hathmepakdtahua.svg";
 import ManWithFlag from "../assets/landing/jitegaadmi.svg";

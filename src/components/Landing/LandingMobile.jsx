@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import LOGO from '../../assets/landingMobile/PagaarLogo.svg'
+import LOGO from '../../assets/landingMobile/LogoFinal.png'
 import MainImage from '../../assets/landingMobile/herosection.svg'
 import DownloadIcon from '../../assets/landingMobile/DownloadIcon.svg'
 import PlayStore from '../../assets/landingMobile/play-store.svg'
@@ -41,7 +41,7 @@ export default function LandingMobile() {
       <div 
       // onClick={()=>setCloseModalReg(false)}
       className="w-full h-[5.625rem] flex justify-center items-center">
-        <img src={LOGO} alt="" />
+        <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' />
       </div>
 
       {/* Title Holder */}
