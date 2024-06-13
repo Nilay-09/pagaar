@@ -4,7 +4,7 @@ import MainImage from '../../assets/landingMobile/herosection.svg'
 import DownloadIcon from '../../assets/landingMobile/DownloadIcon.svg'
 import PlayStore from '../../assets/landingMobile/play-store.svg'
 import AppStore from '../../assets/landingMobile/app-store.svg'
-import Earth from '../../assets/landingMobile/earth.svg'
+import Earth from '../../assets/landingMobile/earth2.png'
 import C1 from '../../assets/landingMobile/card1.svg'
 import C2 from '../../assets/landingMobile/card2.svg'
 import C3 from '../../assets/landingMobile/card3.svg'
@@ -12,7 +12,7 @@ import PagaarLogoF from '../../assets/landing/PagaarLogoF'
 
 import X from "../../assets/landingMobile/X.svg";
 import Telegram from "../../assets/landingMobile/Telegram.svg";
-import ipad from "../../assets/landingMobile/ipad.svg";
+import ipad from "../../assets/landingMobile/ipad.png";
 import bgEC from "../../assets/landingMobile/bgEC.svg";
 import Link from "../../assets/landingMobile/Link.svg";
 import FooterBackGround from "../../assets/landingMobile/tikki2.svg";
