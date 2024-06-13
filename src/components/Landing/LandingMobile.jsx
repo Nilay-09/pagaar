@@ -107,7 +107,7 @@ export default function LandingMobile() {
           <div className="min-h-[290px] bg-[#683BE8]"></div>
 
           <div className="flex-1 bg-[#fff]"></div>
-          <img src={Earth} alt="" className="absolute right-0 top-0 w-full sm:w-[80%] object-cover h-full sm:h-[80%] z-20" />
+          <img src={Earth} alt="" className="absolute right-0 top-1 w-full sm:w-[80%] object-cover h-[95%] sm:h-[80%] z-20" />
         </div>
 
       </div>
