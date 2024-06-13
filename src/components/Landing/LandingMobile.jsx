@@ -49,7 +49,7 @@ export default function LandingMobile() {
       <div className="">
         <div className="w-full max-w-[551px] mx-auto px-6 pt-[5.75rem]">
           <div className="poppins-700 text-[40px] leading-[56px] text-center">
-            Get all jobs on the internet in one place.
+          Get all the jobs on the internet in one place.
           </div>
         </div>
 

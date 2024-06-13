@@ -76,7 +76,7 @@ function landing() {
               {/* Heading */}
               <div className="flex flex-col gap-[52px] justify-between">
                 <div className="poppins-700 text-[42px] text-center leading-[56px] overflow-y-hidden z-20">
-                  Get all the openings on internet at one place.
+                Get all the jobs on the internet in one place.
                 </div>
                 <div className="w-full">
                   <div className="w-[169px] mx-auto flex justify-center gap-1">
