@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
 import LOGO from '../../assets/landingMobile/LogoFinal.png'
-import MainImage from '../../assets/landingMobile/herosection.svg'
+import MainImage from '../../assets/landingMobile/herosection.png'
 import DownloadIcon from '../../assets/landingMobile/DownloadIcon.svg'
 import PlayStore from '../../assets/landingMobile/play-store.svg'
 import AppStore from '../../assets/landingMobile/app-store.svg'
 import Earth from '../../assets/landingMobile/earth2.png'
-import C1 from '../../assets/landingMobile/card1.svg'
-import C2 from '../../assets/landingMobile/card2.svg'
-import C3 from '../../assets/landingMobile/card3.svg'
-import PagaarLogoF from '../../assets/landing/PagaarLogoF'
+
+import C1 from '../../assets/landingMobile/card1.png'
+import C2 from '../../assets/landingMobile/card2.png'
+import C3 from '../../assets/landingMobile/card3.png'
+
+
+// import C1 from '../../assets/landingMobile/card1.svg'
+// import C2 from '../../assets/landingMobile/card2.svg'
+// import C3 from '../../assets/landingMobile/card3.svg'
+// import PagaarLogoF from '../../assets/landing/PagaarLogoF'
 
 import X from "../../assets/landingMobile/X.svg";
 import Telegram from "../../assets/landingMobile/Telegram.svg";
@@ -112,14 +118,14 @@ export default function LandingMobile() {
 
       </div>
 
-      <div className="w-full pb-16 mt-6 flex justify-center items-center flex-col px-6 gap-7">
-        <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
+      <div className="w-full pb-16 mt-6 sm:mx-auto flex justify-center items-center flex-col px-6 gap-7">
+        <div className="w-full max-w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C1} alt="" />
         </div>
-        <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
+        <div className="w-full max-w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C2} alt="" />
         </div>
-        <div className="w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
+        <div className="w-full max-w-[337px] min-h-max custom-shadow-mobile-card rounded-[34.75px]">
           <img src={C3} alt="" />
         </div>
       </div>

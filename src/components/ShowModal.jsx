@@ -99,7 +99,7 @@ function ShowModal({ closeModalByClick }) {
             {/* Input Div */}
             <div className="py-[19.24px] pt-[19.24px] pb-[8.2px] px-1 flex flex-col items-center gap-[8px]">
               <div className={`relative w-full sm:w-[307.1px] h-[43.31px] flex items-baseline border-[2.22px] rounded custom-shadow-modal focus-within:border-[#BDA6FF] ${isError ? 'border-[#FFA6A6]' : mobileNumber ? 'border-[#BDA6FF]' : 'border-[#000]'}`}>
-                <span className="pl-[11.1px] pr-[4px] text-[16px] leading-[24px] text-[#000] poppins-400">
+                <span className="pl-[11.1px] mr-[0.375rem] pr-[4px] text-[16px] leading-[24px] text-[#000] poppins-400">
                   +91
                 </span>
                 <input
