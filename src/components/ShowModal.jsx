@@ -74,7 +74,7 @@ function ShowModal({ closeModalByClick }) {
   return (
     <>
       <div
-        className="modal-wrapper bg-[#00000033] fixed top-0 left-0 right-0 bottom-0 z-50"
+        className="modal-wrapper bg-[#0000005C] fixed top-0 left-0 right-0 bottom-0 z-50"
         onClick={() => closeModalByClick()}
       ></div>
       <div className="z-50 fixed w-[90%] sm:w-[544px] bg-white py-[36px] px-[32px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#D0D0D0] border-[1px] rounded-[8px]">
