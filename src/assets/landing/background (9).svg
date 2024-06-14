@@ -1,12 +1,4 @@
-import { motion } from 'framer-motion'
-import React from 'react'
-
-
-
-export default function BackgroundMainLogo() {
-  return (
-    <div className='mx-auto w-full h-full'>
-<svg width="100%" height="100%" viewBox="0 0 2204 1777" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="2204" height="1777" viewBox="0 0 2204 1777" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="background" clip-path="url(#clip0_3114_11029)">
 <rect id="outer" x="910.316" y="-67.7812" width="1835.14" height="1835.14" rx="917.568" transform="rotate(36.5054 910.316 -67.7812)" stroke="#E9E1FF" stroke-width="1.53056" stroke-dasharray="91.83 91.83"/>
 <rect id="inner" x="427.793" y="541.414" width="1348.42" height="1348.42" rx="674.21" stroke="#E9E1FF" stroke-width="1.53056" stroke-dasharray="91.83 91.83"/>
@@ -735,10 +727,3 @@ export default function BackgroundMainLogo() {
 </clipPath>
 </defs>
 </svg>
-
-
-
-
-    </div>
-  )
-}
