@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import PagaarLogo from "../assets/landing/PagaarLogo.svg";
 import LOGO from '../assets/landingMobile/LogoFinal.png'
@@ -24,6 +24,7 @@ import FooterBackGround from "../assets/landing/Tikka.svg";
 import X from "../assets/landing/X.svg";
 import Telegram from "../assets/landing/Telegram.svg";
 import Link from "../assets/landing/Link.svg";
+import SkeletonImage from "./SkeletonHolders/Skeleton";
 
 function landing() {
   const [closeModal, setCloseModal] = useState(true);
@@ -38,22 +39,49 @@ function landing() {
     setCloseModalReg(true);
   };
 
+
+
+  useEffect(() => {
+    const preloadImage = (url) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = url;
+      link.as = 'image';
+      document.head.appendChild(link);
+    };
+
+    preloadImage(IpadImage);
+  }, []);
+
   return (
     <>
       <div className="w-screen min-h-screen pt-[3.5rem] relative">
         <div className="w-full h-[3.375rem] ">
           {/* Navbar */}
           <div className="w-[75%] h-full mx-auto flex justify-between">
-            <div 
-            // onClick={()=>setCloseModalReg(false)}
-            className="w-[7.75rem] mx-0  h-full flex justify-center items-center">
-              <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' />
-            </div>
-            {!closeModal && <ShowModal closeModalByClick={closeModalByClick}/>}
-            {!closeModalReg && <ShowRegistrationModal closeModalRegByClick={closeModalRegByClick}/>}
             <div
-            onClick={()=>setCloseModal(false)}
-             className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow">
+              // onClick={()=>setCloseModalReg(false)}
+              className="w-[7.75rem] mx-0  h-full flex justify-center items-center"
+            >
+              {/* <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' /> */}
+
+              <SkeletonImage
+                src={LOGO}
+                alt="Logo"
+                width="124px"
+                height="50px"
+              />
+            </div>
+            {!closeModal && <ShowModal closeModalByClick={closeModalByClick} />}
+            {!closeModalReg && (
+              <ShowRegistrationModal
+                closeModalRegByClick={closeModalRegByClick}
+              />
+            )}
+            <div
+              onClick={() => setCloseModal(false)}
+              className="h-[92%] w-[196px] mr-1 rounded bg-[#000] border-[1px] border-[#fff] text-[#fff] flex justify-center items-center text-[1rem] leading-4 poppins-600 custom-shadow"
+            >
               Join Waiting List
             </div>
           </div>
@@ -70,13 +98,12 @@ function landing() {
           </div> 
           */}
 
-
           <div className="z-10 mt-[80px] w-full ">
             <div className="mx-auto w-[551px] flex flex-col">
               {/* Heading */}
               <div className="flex flex-col gap-[52px] justify-between">
                 <div className="poppins-700 text-[42px] text-center leading-[56px] overflow-y-hidden z-20">
-                Get all the jobs on the internet in one place.
+                  Get all the jobs on the internet in one place.
                 </div>
                 <div className="w-full">
                   <div className="w-[169px] mx-auto flex justify-center gap-1">
@@ -93,13 +120,22 @@ function landing() {
               <div className="flex pt-10 z-20">
                 <div className="w-full mx-auto flex gap-4 justify-center">
                   <span>
-                    {" "}
-                    <img src={PlayStoreIcon} alt="" />{" "}
+                    <SkeletonImage
+                      src={PlayStoreIcon}
+                      alt="Playstore"
+                      className="w-full h-full"
+                      SkeletonWidth="174px"
+                      SkeletonHeight="50px"
+                    />
                   </span>
                   <span>
-                    {" "}
-                   
-                    <img src={AppStoreIcon} alt="" />{" "}
+                    <SkeletonImage
+                      src={AppStoreIcon}
+                      alt="Appstore"
+                      className="w-full h-full"
+                      SkeletonHeight="50px"
+                      SkeletonWidth="174px"
+                    />
                   </span>
                 </div>
               </div>
@@ -197,14 +233,18 @@ function landing() {
           <div className="mt-[124px] w-[305px] ">
             <div className="w-full flex flex-col items-center justify-between min-h-[106px]">
               <div className="w-[124px] flex justify-center items-center">
-              <img src={LOGO} alt="" className='w-[7.75rem] h-[3.125rem]' />
+              <SkeletonImage
+                src={LOGO}
+                alt="Logo"
+                width="124px"
+                height="50px"
+              />
               </div>
 
               <div className="text-[1.125rem] leading-[24px] text-[#E6E8EC] poppins-600">
                 Pagaar.io 0.0.01
               </div>
             </div>
-
 
             <div className="text-[17px] flex gap-[20px] mt-[30px] justify-center leading-[24px] text-[#777E90] poppins-500">
               <span className="">Privacy Policy</span>
